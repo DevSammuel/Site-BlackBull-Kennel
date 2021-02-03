@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>BlackBull Kennel</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="padrao.css">
+</head>
+<script src="funcoes.js"></script>
+<body>
+	<div id="interface">
+		<header id="cabecalho">
+		  <hgroup>
+		    <h1>BlackBull Kennel</h1>
+		    <h2>Breeding champions</h2>
+	      </hgroup>
+	      <img id="icone"src="logo.png", width="150px">
+
+	        <nav id="menu"> 
+	         <ul> 
+	          <li onmouseover="mudaFoto('homeimg.png')" onmouseout="mudaFoto('logo.png')"><a href="index.html">HOME</a></li>
+	          <li onmouseover="mudaFoto('breedimg.png')" onmouseout="mudaFoto('logo.png')"><a href="breed.html">BREED</a></li>
+	          <li onmouseover="mudaFoto('kennelimg.png')" onmouseout="mudaFoto('logo.png')"><a href="kennel.html">KENNEL</a></li>
+	          <li onmouseover="mudaFoto('contactimg.png')" onmouseout="mudaFoto('logo.png')"><a href="contact.html">CONTATC</a></li>
+	         </ul>
+	        </nav>  
+        </header> 
+
+        <section id="corpo-full">
+        	<article id="mprincipal">
+             		<header id="cabecalho-artigo">
+
+                        <hgroup>
+	                      <h3>Pedigree CBKC</h3>
+	                      <h1>Contagem/MG</h1>
+	                      <h2>Proprietario: Sammuel</h2>
+	                      <h3 class="direita">Updated 13/12/2020</h3>
+	                     </hgroup>
+	                </header>
+	                <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</p>
+
+	                <section id="conteudo">
+	                	<img src="mapa.jpg" usemap="#meumapa"/>
+	                	<map name="meumapa">
+	                		<area shape="rect" coords="122,34,209,98" href="padrao.html#1" target="janela"/>
+	                		<area shape="rect" coords="180,201,287,297" href="padrao.html#2" target="janela"/>
+	                		<area shape="rect" coords="442,237,546,317" href="padrao.html#3" target="janela"/>
+
+	                	</map>
+	                	<iframe src="padrao.html" name="janela" id="frame-spec"></iframe>
+	                </section>
+
+
+	        </article>
+
+
+        </section>
+
+
+         <footer id="rodape"> <h1>@Copyright 2020 | BLACKBULL KENNEL</h1>
+                     <h2><a href="#"target="_blank">Instagram</a> - <a href="#"target="_blank">Facebook</a></h2>
+            </footer>
+
+	     
+
+
+	</div>
+</body>
+
+</html>

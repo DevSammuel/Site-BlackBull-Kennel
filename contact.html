@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>BlackBull Kennel</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<script src="funcoes.js"></script>
+<script >
+function calc_total(){
+	var qtd = parseInt(document.getElementById('cQtd').value)
+	tot = qtd * 2500;
+	document.getElementById('cTot').value = tot;
+}
+
+
+
+</script>
+<body>
+	<div id="interface">
+		<header id="cabecalho">
+		  <hgroup>
+		    <h1>BlackBull Kennel</h1>
+		    <h2>Breeding champions</h2>
+	      </hgroup>
+	      <img id="icone"src="logo.png", width="150px">
+
+	        <nav id="menu"> 
+	         <ul> 
+	          <li onmouseover="mudaFoto('homeimg.png')" onmouseout="mudaFoto('logo.png')"><a href="index.html">HOME</a></li>
+	          <li onmouseover="mudaFoto('breedimg.png')" onmouseout="mudaFoto('logo.png')"><a href="breed.html">BREED</a></li>
+	          <li onmouseover="mudaFoto('kennelimg.png')" onmouseout="mudaFoto('logo.png')"><a href="kennel.html">KENNEL</a></li>
+	          <li onmouseover="mudaFoto('contactimg.png')" onmouseout="mudaFoto('logo.png')"><a href="contact.html">CONTATC</a></li>
+	         </ul>
+	        </nav>  
+        </header>
+
+        <section id="corpo-full">
+        	<article id="mprincipal">
+             		<header id="cabecalho-artigo">
+
+                        <hgroup>
+	                      <h3>Pedigree CBKC</h3>
+	                      <h1>Fale Conosco</h1>
+	                      <h2>Proprietario: Sammuel</h2>
+	                      <h3 class="direita">Updated 13/12/2020</h3>
+	                     </hgroup>
+	                </header>
+
+
+	                <form method="post" id="fContato" action="mailto:contato@blackbull.com" oninput="calc_total();">
+	                <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+	                  <p>Nome:<input type"text" name="tNome" id="cNome" size="20" maxlenght="30" placeholder="Nome completo"/></p> 
+	                  <p>Senha:<input type"password"name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 digitos"/></p>
+	                  <p>E-mail:<input type"email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="ex:black@bull.com"/></p>
+
+	                  <fieldset id="sexo"><legend>Sexo</legend> 
+	                    <input type="radio" name="tSexo" id="cMasc"/><label>Masculino</label> <br>
+	                    <input type="radio" name="tSexo" id="cFem"/><label>Feminino</label> 
+	                  </fieldset>
+
+	                 <p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"></p>
+	                </fieldset>
+
+	                <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+	                     <p>Logradouro:<input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua/Av/Travessia"></p>
+	                     <p>Número:<input type="number" name="tNum" id="nNum" min="1" max="99999" placeholder="ex:231"></p>
+	                     <p>Estado:<select name="tEst" id="cEst">
+	                     	<optgroup label="1"> <option>Minas Gerais</option>
+	                     	<option>São Paulo</option> </optgroup>
+	                     	<optgroup label="2"> <option>Rio De Janeiro</option>
+	                        <option>Parana</option> </optgroup>
+	                     </select></p>
+
+	                     <p>Cidade:<input type="text" name="tCid" id="cCid" size="20" maxlength="40" list="cidades">
+	                     <datalist id="cidades"> 
+	                     	<option value="Contagem"></option>
+	                     	<option value="Betim"></option>
+	                     	<option value="BH"></option>
+	                     </datalist>
+	                     </p>
+	                </fieldset>
+
+	                 <fieldset id="mensagem">
+	                    <legend>Mensagem do Usuário</legend>
+	                      <p>Grau de Urgência:<input type="range" name="tUrg" id="cUrg" min="0" max"10" step="2"></p>
+	                      <p>Mensagem:<textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Digite aqui sua mensagem"></textarea></p> 
+	                 </fieldset>
+
+	                  <fieldset id="pedido">
+	                      <legend>Quero um filhote</legend> 
+	                      <p><input type="checkbox" name="tPed" id="cPed" checked/>Gostaria de adquirir um filhote quando disponível</p>
+	                      <p>Cor:<input type="color" name="tCor" id="cCor"></p>
+	                      <p>Quantidade:<input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p>
+	                      <p>Preço Total: R$<input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly></p> 
+	                   </fieldset>
+
+
+	                     <input type="submit" value="Enviar">
+	                  </form>
+
+
+
+	                  <br>
+	                  <br>
+	                  <br>
+	                  <br><br>
+	                  <br>
+	                  <br><br>
+	                  <br>
+	                  <br>
+	                  <br>
+	                  <br>
+	                <div id="tv-radio">
+	                	<audio id="musica" controls="controls">
+	                		<source src="audio1.mp3" type="audio/mpeg"/>
+	                		Desculpe, mas não foi possivel carregar o audio
+	                	</audio>
+	                	<video id="video" controls="controls" poster="video-mini03.jpg">
+	                		<source src="video1.mp4" type="video/mp4"/>
+	                		Desculpe, mas não foi possivel carregar o video
+	                	</video>
+	                </div>
+	                <iframe width="560" height="315" src="https://www.youtube.com/embed/4YtWYJDooTs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	        </article>
+	    </section>
+
+
+
+
+
+
+
+         <footer id="rodape"> <h1>@Copyright 2020 | BLACKBULL KENNEL</h1>
+                     <h2><a href="#"target="_blank">Instagram</a> - <a href="#"target="_blank">Facebook</a></h2>
+            </footer>
+
+	     
+
+
+	</div>
+</body>
+
+</html>
